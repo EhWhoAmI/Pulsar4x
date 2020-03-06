@@ -105,6 +105,8 @@ namespace Pulsar4X.SDL2UI
                         //we reset the designer here, so we don't end up trying to edit the precious design. 
                         var factionTech = _state.Faction.GetDataBlob<FactionTechDB>();
                         _componentDesigner = new ComponentDesigner(_designables[_designType], factionTech);
+                        _nameInputBuffer = new byte[128];
+                        //Add alert to inform user that the design was in fact, designed
                     }
                     ImGui.NewLine();
                 } 
